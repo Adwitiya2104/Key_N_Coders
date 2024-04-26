@@ -12,25 +12,27 @@ const roadmapSchema = new Schema({
         required: true,
         trim: true
     },
+    course: {
+        type: Schema.Types.ObjectId,
+        ref: "Course", 
+        required: true
+    },
     modules: [{
         title: {
             type: String,
             required: true,
             trim: true
         },
-        numberofQuestions:{
-            type:Number,
-            required:true
+        numberofQuestions: {
+            type: Number,
+            required: true
         },
-        questions:[
-            {
-                type: Schema.Types.ObjectId,
-                ref:"Question"
-            }
-        ]
+        questions: [{
+            type: Schema.Types.ObjectId,
+            ref: "Question"
+        }],
         
     }],
-
 }, {
     timestamps: true
 });
