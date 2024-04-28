@@ -28,7 +28,7 @@ const questionSchema = new Schema({
         }],
         required: true
     },
-    // Other fields specific to the question (e.g., difficulty level, tags)
+    
 }, {
     timestamps: true
 });
